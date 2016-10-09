@@ -1,5 +1,5 @@
 all:
-	make
+	gcc -fPIC -shared -O2 -o rmontage/wumanber/wumanber.so rmontage/wumanber/wumanber_impl.c
 
 clean:
-	rm -rf *.svm *.model *.anlyz *.config *.out *.pyc
+	rm -rf rmontage/wumanber/wumanber.so
