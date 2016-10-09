@@ -5,7 +5,7 @@ import os
 from setuptools.command.install import install
 from setuptools import setup
 
-with open('README.md') as f:
+with open('README.rst') as f:
     LONG_DESCRIPTION = f.read()
 
 class MakeCommand(install):
@@ -19,7 +19,7 @@ class MakeCommand(install):
 
 setup(
     name='tmontage',
-    version='0.1.1',
+    version='0.1.3',
     packages=['tmontage'],
     url='https://github.com/ailurus1991/Montage',
     license='GPL2',
