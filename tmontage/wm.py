@@ -18,7 +18,7 @@
 # https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
 
 # import datetime
-import os,urlparse,sys
+import os,urlparse
 from ctypes import c_int, CFUNCTYPE, CDLL, c_char_p, POINTER
 # from array import array
 from urllib2 import urlopen,URLError,HTTPError,Request

@@ -5,37 +5,29 @@ import os
 from setuptools.command.install import install
 from setuptools import setup
 
-
 with open('README.md') as f:
     LONG_DESCRIPTION = f.read()
-
 
 class MakeCommand(install):
     def run(self):
         os.system('make')
-        common_dir = 'rmontage/wumanber'
+        common_dir = 'tmontage/wumanber'
         target_dir = '%s/%s' % (self.build_lib, common_dir)
         self.mkpath(target_dir)
-        print common_dir, "ccc"
-        print target_dir, "ttt"
         os.system('cp %s/wumanber.so %s' %(common_dir, target_dir))
-        print 'cp %s/wumanber.so %s' %(common_dir, target_dir+'/')
-
-
-
         install.run(self)
 
 setup(
-    name='rmontage',
-    version='0.0.1',
-    packages=['rmontage'],
-    url='www.guokr.com',
+    name='tmontage',
+    version='0.1.1',
+    packages=['tmontage'],
+    url='https://github.com/ailurus1991/Montage',
     license='GPL2',
-    author='jinyang',
+    author='jinyang zhou',
     author_email='jinyang.zhou@guokr.com',
-    description='',
+    description='A multipattern matching toolbox',
     long_description=LONG_DESCRIPTION,
     install_requires=[''],
-    keywords='',
+    keywords='matching, multipattern matching',
     cmdclass={'install': MakeCommand}
 )

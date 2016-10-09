@@ -1,5 +1,5 @@
 all:
-	gcc -fPIC -shared -O2 -o rmontage/wumanber/wumanber.so rmontage/wumanber/wumanber_impl.c
+	gcc -fPIC -shared -O2 -o tmontage/wumanber/wumanber.so tmontage/wumanber/wumanber_impl.c
 
 clean:
-	rm -rf rmontage/wumanber/wumanber.so
+	rm -rf tmontage/wumanber/wumanber.so
