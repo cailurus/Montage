@@ -1,1 +1,2 @@
 include Makefile
+recursive-include rmontage/wumanber/ *.c *.h
